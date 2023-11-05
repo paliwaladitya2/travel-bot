@@ -1,0 +1,48 @@
+[
+  {
+    type: 'milvus',
+    title: 'milvus - @@var(name)@@',
+    module: 'milvus',
+    action: 'milvus',
+    groupTitle: 'milvus',
+    groupIcon: 'fab fa-lg fa-js comp-flows',
+    icon: 'fad fa-lg fa-running comp-flows',
+    dataPickObject: true,
+
+    # Define the input options'
+    properties: [
+      {
+        group: 'Document Input',
+        variables: [
+          {
+            name: 'name', optionName: 'name', title: 'Name<sup style="color:red">*</sup>', type: 'text', required: true
+          },
+           {
+            name: 'key', optionName: 'key', title: 'Api Key<sup style="color:red">*</sup>',serverDataBindings: true, type: 'text', required: true
+          },
+           {
+            name: 'ModalName', optionName: 'ModalName', title: 'Modal Name<sup style="color:red">*</sup>', type: 'text', required: true
+          },
+          {
+            name: 'text', optionName: 'text', title: 'Collection Name<sup style="color:red">*</sup>', type: 'text', required: true,serverDataBindings: true , help: 'Please Enter Collection Name'
+          },
+          {
+            name: 'search', optionName: 'search', title: 'Search Query<sup style="color:red">*</sup>', type: 'text', required: true,serverDataBindings: true , help: 'Please Enter Your Search Query'
+          },
+
+          {
+             name: 'output', optionName: 'output', title: 'Output', type: 'boolean', defaultValue: false
+          }
+        ],
+      },
+    ],
+
+    # Specify the modules required for this action.
+    usedModules: {
+      node: {
+         "dotenv": "^16.3.1",
+         "@zilliz/milvus2-sdk-node": "^2.3.3"
+      },
+    },
+  },
+]

@@ -1,0 +1,27 @@
+<!-- Wappler include head-page="layouts/main" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="indexnew" appConnect="local" -->
+<meta name="ac:route" content="/index-new">
+
+<div class="d-flex">
+    <div class="row w-100">
+        <div class="col-12">
+            <div class="card">
+
+                <div class="card-header">
+                    <h6 class="card-title text-center text-dark">
+                        Travel Suggestion Chat Bot
+                    </h6>
+                </div>
+                <div class="card-body" style="height:60vh;">
+                </div>
+                <div class="card-footer">
+                    <form is="dmx-serverconnect-form" method="post" id="formMessages" action="/api/response" class="text-center">
+                        <textarea id="txtMessage" name="message" class="form-control"></textarea>
+                        <button class=" mt-1 btn btn-primary btn-sm" type="submit">Send</button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

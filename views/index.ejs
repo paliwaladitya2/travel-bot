@@ -1,2 +1,45 @@
 <!-- Wappler include head-page="layouts/main" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="index" appConnect="local" -->
 <meta name="ac:route" content="/">
+<div class="container">
+    <div class="row">
+        <div class="box conversations">
+            <div class="top">
+                <button class="new_convo" onclick="new_conversation()">
+                    <i class="fa-regular fa-plus"></i>
+                    <span>New Conversation</span>
+                </button>
+                <div class="spinner"></div>
+            </div>
+            <div class="bottom_buttons">
+                <button onclick="delete_conversations()">
+                    <i class="fa-regular fa-trash"></i>
+                    <span>Clear Conversations</span>
+                </button>
+            </div>
+        </div>
+        <div class="conversation disable-scrollbars">
+            <div class="stop_generating stop_generating-hidden">
+                <button id="cancelButton">
+                    <span>Stop Generating</span>
+                    <i class="fa-regular fa-stop"></i>
+                </button>
+            </div>
+            <div class="user-input">
+                <div class="box input-box d-flex justify-content-between ">
+                    <form>
+                        <textarea style="width:100%;" class="form-control d-flex align-items-center" id="message-input" placeholder="Ask a question" style="white-space: pre-wrap;" oninput="resizeTextarea(this)" name="message"></textarea>
+
+                    </form>
+                    <div id="send-button">
+                        <i class="fa-regular fa-paper-plane-top"></i>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mobile-sidebar">
+    <i class="fa-solid fa-bars"></i>
+</div>
